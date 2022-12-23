@@ -22,3 +22,14 @@ int random_int(int initial, int last) {
     std::cin >> rows;
     std::cout << "Enter the number of columns: ";
     std::cin >> columns;
+    
+// For print a binary matrix.
+    std::cout << "Binary Matrix" << std::endl;
+    for (int i = 0; i < rows; ++i) {
+        for (int j = 0; j < columns; ++j) {
+            std::cout << random_int(0, 1) << " ";
+        }
+        std::cout << std::endl;
+    }
+
+}
