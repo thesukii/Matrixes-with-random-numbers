@@ -1,2 +1,18 @@
 #include <iostream>
 #include <random>
+#include <iostream>
+#include <random>
+
+static std::random_device rd;  // Random device engine, usually based on /dev/random on UNIX-like systems
+static std::mt19937_64 rng(rd()); // Initialize Mersennes' twister using rd to generate the seed
+
+// Generate random doubles in the interval [initial, last)
+double random_real(double initial, double last) {
+    std::uniform_real_distribution<double> distribution(initial, last);
+    return distribution(rng);  // Use rng as a generator
+}
+
+// Generate random int in the interval [initial, last]
+int random_int(int initial, int last) {
+    std::uniform_int_distribution<int> distribution(initial, last);
+    return distribution(rng);  // Use rng as a generator
