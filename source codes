@@ -16,3 +16,9 @@ double random_real(double initial, double last) {
 int random_int(int initial, int last) {
     std::uniform_int_distribution<int> distribution(initial, last);
     return distribution(rng);  // Use rng as a generator
+    int main() {
+    int rows, columns;
+    std::cout << "Enter the number of rows: ";
+    std::cin >> rows;
+    std::cout << "Enter the number of columns: ";
+    std::cin >> columns;
